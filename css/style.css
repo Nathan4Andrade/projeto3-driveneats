@@ -140,3 +140,33 @@ button span {
   letter-spacing: 0.018em;
   color: #ffffff;
 }
+/* 
+@media (min-width: 821px) {
+  body {
+    width: 414px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 30px;
+    box-shadow: 30px 30px 60px 0px hsla(224, 30%, 27%, 0.363);
+    background-color: #ffffff;
+  }
+  header {
+    width: 414px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    left: auto;
+  }
+  main {
+    background-color: #eeeeee;
+  }
+  footer {
+    width: 414px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    left: auto;
+  }
+} */
