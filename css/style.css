@@ -70,6 +70,7 @@ h2 {
 .pedidos img {
   width: 144px;
   height: 82px;
+  border-radius: 4px;
 }
 main h2 {
   font-family: "Righteous";
