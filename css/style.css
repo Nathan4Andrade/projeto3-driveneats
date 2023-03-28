@@ -34,13 +34,14 @@ header p {
   color: #ffffff;
 }
 main {
-  margin-top: 123px;
+  margin-top: 96px;
   width: 100%;
   padding-bottom: 123px;
 }
 
 h2 {
   padding-left: 19px;
+  padding-top: 27px;
 }
 
 .pedidos {
