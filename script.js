@@ -134,5 +134,5 @@ function cancelar() {
 }
 
 function finalizar() {
-  window.open("https://wa.me/5583987231477?text=" + encodeURI(msg));
+  window.open("https://wa.me/5583987241377?text=" + encodeURI(msg));
 }
