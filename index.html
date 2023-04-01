@@ -40,9 +40,9 @@
           data-test="dish"
         >
           <img src="img/sushi.jpg" />
-          <h3 data-test="item-name">Sushi Burguer</h3>
+          <h3 id="nome" id="nome" data-test="item-name">Sushi Burguer</h3>
           <h4>Salmão ou <br />camarão</h4>
-          <p data-test="item-price">R$ 19,90</p>
+          <p id="price" data-test="item-price">R$ <span>19,90</span></p>
         </div>
         <div
           class="caixa-pedido temaki"
@@ -50,25 +50,25 @@
           data-test="dish"
         >
           <img src="img/temaki.jpg" />
-          <h3 data-test="item-name">Temaki</h3>
+          <h3 id="nome" id="nome" data-test="item-name">Temaki</h3>
           <h4>
             Salmão, arroz e <br />
             Cebolinha
           </h4>
-          <p data-test="item-price">R$ 35,90</p>
+          <p id="price" data-test="item-price">R$ <span>35,90</span></p>
         </div>
         <div
           class="caixa-pedido harumaki"
-          onClick="selecionarAlimento('this')"
+          onClick="selecionarAlimento(this)"
           data-test="dish"
         >
           <img src="img/harumaki.jpg" />
-          <h3 data-test="item-name">Harumaki</h3>
+          <h3 id="nome" data-test="item-name">Harumaki</h3>
           <h4>
             Rolinho<br />
             primavera
           </h4>
-          <p data-test="item-price">R$ 22,90</p>
+          <p id="price" data-test="item-price">R$ <span>22,90</span></p>
         </div>
       </div>
       <h2>Agora, sua bebida</h2>
@@ -79,9 +79,9 @@
           data-test="drink"
         >
           <img src="img/suco-de-acerola.jpg" />
-          <h3 data-test="item-name">Suco de acerola</h3>
+          <h3 id="nome" data-test="item-name">Suco de acerola</h3>
           <h4>Copo 400ml</h4>
-          <p data-test="item-price">R$4,90</p>
+          <p id="price" data-test="item-price">R$ <span>4,90</span></p>
         </div>
         <div
           class="caixa-pedido limao"
@@ -89,9 +89,9 @@
           data-test="drink"
         >
           <img src="img/suco-de-limao.jpg" />
-          <h3 data-test="item-name">Suco de limão</h3>
+          <h3 id="nome" data-test="item-name">Suco de limão</h3>
           <h4>Copo 400ml</h4>
-          <p data-test="item-price">R$3,90</p>
+          <p id="price" data-test="item-price">R$ <span>3,90</span></p>
         </div>
         <div
           class="caixa-pedido laranja"
@@ -99,9 +99,9 @@
           data-test="drink"
         >
           <img src="img/suco-de-laranja.jpg" />
-          <h3 data-test="item-name">Suco de laranja</h3>
+          <h3 id="nome" data-test="item-name">Suco de laranja</h3>
           <h4>Copo 400ml</h4>
-          <p data-test="item-price">R$4,50</p>
+          <p id="price" data-test="item-price">R$ <span>4,50</span></p>
         </div>
       </div>
       <h2>Por fim, sua sobremesa</h2>
@@ -112,9 +112,9 @@
           data-test="dessert"
         >
           <img src="img/acai.jpg" />
-          <h3 data-test="item-name">Açaí</h3>
+          <h3 id="nome" data-test="item-name">Açaí</h3>
           <h4>Acompanhamentos</h4>
-          <p data-test="item-price">R$ 15,90</p>
+          <p id="price" data-test="item-price">R$ <span>15,90</span></p>
         </div>
         <div
           class="caixa-pedido mousse"
@@ -122,9 +122,9 @@
           data-test="dessert"
         >
           <img src="img/mousse.jpg" />
-          <h3 data-test="item-name">Mousse</h3>
+          <h3 id="nome" data-test="item-name">Mousse</h3>
           <h4>Maracujá</h4>
-          <p data-test="item-price">R$ 6,90</p>
+          <p id="price" data-test="item-price">R$ <span>6,90</span></p>
         </div>
         <div
           class="caixa-pedido petit-gateau"
@@ -132,9 +132,9 @@
           data-test="dessert"
         >
           <img src="img/petit-gateau.jpg" />
-          <h3 data-test="item-name">Petit Gateau</h3>
+          <h3 id="nome" data-test="item-name">Petit Gateau</h3>
           <h4>Muito chocolate</h4>
-          <p data-test="item-price">R$ 9,90</p>
+          <p id="price" data-test="item-price">R$ <span>9,90</span></p>
         </div>
       </div>
     </main>

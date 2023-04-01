@@ -142,6 +142,7 @@ button {
   border-radius: 50px;
   border: none;
   background-color: rgb(40, 173, 40);
+  cursor: pointer;
 }
 
 button span {
