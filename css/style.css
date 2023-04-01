@@ -124,12 +124,24 @@ footer {
   background: #ffffff;
 }
 
+button .display {
+  display: none;
+}
+
 button {
   width: 362px;
   height: 61px;
   background: #cbcbcb;
   border-radius: 50px;
   border: none;
+}
+
+.liberado {
+  width: 362px;
+  height: 61px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(40, 173, 40);
 }
 
 button span {
