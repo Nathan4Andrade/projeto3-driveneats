@@ -9,34 +9,12 @@ let priceBebida = null;
 let nameSobremesa = null;
 let priceSobremesa = null;
 let totalPrice = 0;
-
-function confirmarPedido() {
-  console.log(nameAlimento);
-  console.log(nameBebida);
-  console.log(nameSobremesa);
-  totalPrice = (
-    Number(priceAlimento) +
-    Number(priceBebida) +
-    Number(priceSobremesa)
-  ).toFixed(2);
-  console.log(totalPrice);
-  if (boxAlimento !== null && boxBebida !== null && boxSobremesa !== null) {
-    const confirmar = document.querySelector("button");
-    const confirmarTexto = document.querySelector("button span");
-    confirmar.disabled = false;
-    confirmar.classList.add("liberado");
-    confirmarTexto.innerHTML = "Fechar pedido";
-    pedidoPronto = true;
-  }
-}
-
-function enviarPedido() {
-  if (pedidoPronto) {
-    let str = `Olá, gostaria de fazer o pedido: \n - Prato: ${nameAlimento} \n- Bebida: ${nameBebida} \n- Sobremesa: ${nameSobremesa} \nTotal: R$ ${totalPrice}`;
-    console.log(str);
-    window.open("https://wa.me/5583999999999?text=" + encodeURI(str));
-  }
-}
+totalPrice = (
+  Number(priceAlimento) +
+  Number(priceBebida) +
+  Number(priceSobremesa)
+).toFixed(2);
+let msg = "";
 
 function selecionarAlimento(alimento) {
   boxAlimento = alimento.innerHTML;
@@ -86,4 +64,75 @@ function selecionarSobremesa(sobremesa) {
     .querySelector(".sobremesa .selecionado p span")
     .textContent.replace(",", ".");
   confirmarPedido();
+}
+
+function confirmarPedido() {
+  console.log(nameAlimento);
+  console.log(nameBebida);
+  console.log(nameSobremesa);
+  totalPrice = (
+    Number(priceAlimento) +
+    Number(priceBebida) +
+    Number(priceSobremesa)
+  ).toFixed(2);
+  console.log(totalPrice);
+  if (boxAlimento !== null && boxBebida !== null && boxSobremesa !== null) {
+    const confirmar = document.querySelector("button");
+    const confirmarTexto = document.querySelector("button span");
+    confirmar.disabled = false;
+    confirmar.classList.add("liberado");
+    confirmarTexto.innerHTML = "Fechar pedido";
+    pedidoPronto = true;
+  }
+}
+
+function fecharPedido() {
+  if (pedidoPronto) {
+    const fundo = document.querySelector(".fundo-tela");
+    fundo.classList.remove("nao-confirmado");
+
+    msg = `Olá, gostaria de fazer o pedido: \n - Prato: ${nameAlimento} \n- Bebida: ${nameBebida} \n- Sobremesa: ${nameSobremesa} \nTotal: R$ ${totalPrice}`;
+    console.log(msg);
+
+    finalizarPedido();
+  }
+}
+
+function finalizarPedido() {
+  const alimentoFinal = document.querySelector(
+    ".informacoes-pedidos .alimento h4"
+  );
+  alimentoFinal.innerHTML = nameAlimento;
+  const valorAlimentoFinal = document.querySelector(
+    ".informacoes-pedidos .alimento h5"
+  );
+  valorAlimentoFinal.innerHTML = priceAlimento.replace(".", ",");
+
+  const bebidaFinal = document.querySelector(".informacoes-pedidos .bebida h4");
+  bebidaFinal.innerHTML = nameBebida;
+  const valorBebidaFinal = document.querySelector(
+    ".informacoes-pedidos .bebida h5"
+  );
+  valorBebidaFinal.innerHTML = priceBebida.replace(".", ",");
+
+  const sobremesaFinal = document.querySelector(
+    ".informacoes-pedidos .sobremesa h4"
+  );
+  sobremesaFinal.innerHTML = nameSobremesa;
+  const valorSobremesaFinal = document.querySelector(
+    ".informacoes-pedidos .sobremesa h5"
+  );
+  valorSobremesaFinal.innerHTML = priceSobremesa.replace(".", ",");
+
+  const valorTotal = document.querySelector(".informacoes-pedidos .total h5");
+  valorTotal.innerHTML = totalPrice.replace(".", ",");
+}
+
+function cancelar() {
+  const fundo = document.querySelector(".fundo-tela");
+  fundo.classList.add("nao-confirmado");
+}
+
+function finalizar() {
+  window.open("https://wa.me/5583999999999?text=" + encodeURI(msg));
 }

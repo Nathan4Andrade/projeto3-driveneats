@@ -27,6 +27,36 @@
     <link rel="icon" sizes="180x180" href="img/favicon.ico" />
   </head>
   <body>
+    <div class="fundo-tela nao-confirmado">
+      <div class="tela-confirmacao">
+        <h1>Confirme seu pedido</h1>
+        <div class="informacoes-pedidos">
+          <div class="alimento">
+            <h4>Teste</h4>
+            <h5>Teste</h5>
+          </div>
+          <div class="bebida">
+            <h4>Teste</h4>
+            <h5>Teste</h5>
+          </div>
+          <div class="sobremesa">
+            <h4>Teste</h4>
+            <h5>Teste</h5>
+          </div>
+          <div class="total">
+            <h4>TOTAL</h4>
+            <h5>Teste</h5>
+          </div>
+        </div>
+        <div class="confirmar" onclick="finalizar()">
+          <p>Tudo certo, pode pedir!</p>
+        </div>
+        <div class="cancelar">
+          <p onclick="cancelar()">Cancelar</p>
+        </div>
+      </div>
+    </div>
+
     <header>
       <h1>DrivenEats</h1>
       <p>Sua comida em 6 minutos</p>
@@ -141,7 +171,7 @@
     <footer>
       <button
         class="btn"
-        onclick="enviarPedido()"
+        onclick="fecharPedido()"
         type="button"
         data-test="order-btn"
         disabled
