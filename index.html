@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/colors.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,13 +34,21 @@
     <main>
       <h2>Primeiro, seu prato</h2>
       <div class="pedidos prato">
-        <div class="caixa-pedido" data-test="dish">
+        <div
+          class="caixa-pedido sushi"
+          onClick="selecionarAlimento(this)"
+          data-test="dish"
+        >
           <img src="img/sushi.jpg" />
           <h3 data-test="item-name">Sushi Burguer</h3>
           <h4>Salmão ou <br />camarão</h4>
           <p data-test="item-price">R$ 19,90</p>
         </div>
-        <div class="caixa-pedido" data-test="dish">
+        <div
+          class="caixa-pedido temaki"
+          onClick="selecionarAlimento(this)"
+          data-test="dish"
+        >
           <img src="img/temaki.jpg" />
           <h3 data-test="item-name">Temaki</h3>
           <h4>
@@ -50,7 +57,11 @@
           </h4>
           <p data-test="item-price">R$ 35,90</p>
         </div>
-        <div class="caixa-pedido" data-test="dish">
+        <div
+          class="caixa-pedido harumaki"
+          onClick="selecionarAlimento('this')"
+          data-test="dish"
+        >
           <img src="img/harumaki.jpg" />
           <h3 data-test="item-name">Harumaki</h3>
           <h4>
@@ -62,19 +73,31 @@
       </div>
       <h2>Agora, sua bebida</h2>
       <div class="pedidos bebida">
-        <div class="caixa-pedido" data-test="drink">
+        <div
+          class="caixa-pedido acerola"
+          onClick="selecionarBebida(this)"
+          data-test="drink"
+        >
           <img src="img/suco-de-acerola.jpg" />
           <h3 data-test="item-name">Suco de acerola</h3>
           <h4>Copo 400ml</h4>
           <p data-test="item-price">R$4,90</p>
         </div>
-        <div class="caixa-pedido" data-test="drink">
+        <div
+          class="caixa-pedido limao"
+          onClick="selecionarBebida(this)"
+          data-test="drink"
+        >
           <img src="img/suco-de-limao.jpg" />
           <h3 data-test="item-name">Suco de limão</h3>
           <h4>Copo 400ml</h4>
           <p data-test="item-price">R$3,90</p>
         </div>
-        <div class="caixa-pedido" data-test="drink">
+        <div
+          class="caixa-pedido laranja"
+          onClick="selecionarBebida(this)"
+          data-test="drink"
+        >
           <img src="img/suco-de-laranja.jpg" />
           <h3 data-test="item-name">Suco de laranja</h3>
           <h4>Copo 400ml</h4>
@@ -83,19 +106,31 @@
       </div>
       <h2>Por fim, sua sobremesa</h2>
       <div class="pedidos sobremesa">
-        <div class="caixa-pedido" data-test="dessert">
+        <div
+          class="caixa-pedido acai"
+          onClick="selecionarSobremesa(this)"
+          data-test="dessert"
+        >
           <img src="img/acai.jpg" />
           <h3 data-test="item-name">Açaí</h3>
           <h4>Acompanhamentos</h4>
           <p data-test="item-price">R$ 15,90</p>
         </div>
-        <div class="caixa-pedido" data-test="dessert">
+        <div
+          class="caixa-pedido mousse"
+          onClick="selecionarSobremesa(this)"
+          data-test="dessert"
+        >
           <img src="img/mousse.jpg" />
           <h3 data-test="item-name">Mousse</h3>
           <h4>Maracujá</h4>
           <p data-test="item-price">R$ 6,90</p>
         </div>
-        <div class="caixa-pedido" data-test="dessert">
+        <div
+          class="caixa-pedido petit-gateau"
+          onClick="selecionarSobremesa(this)"
+          data-test="dessert"
+        >
           <img src="img/petit-gateau.jpg" />
           <h3 data-test="item-name">Petit Gateau</h3>
           <h4>Muito chocolate</h4>
