@@ -136,15 +136,6 @@ button {
   border: none;
 }
 
-.liberado {
-  width: 362px;
-  height: 61px;
-  border-radius: 50px;
-  border: none;
-  background-color: rgb(40, 173, 40);
-  cursor: pointer;
-}
-
 button span {
   font-family: "Roboto";
   font-style: normal;
@@ -155,36 +146,18 @@ button span {
   letter-spacing: 0.018em;
   color: #ffffff;
 }
-/* 
-@media (min-width: 821px) {
-  body {
-    width: 414px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    border-radius: 30px;
-    box-shadow: 30px 30px 60px 0px hsla(224, 30%, 27%, 0.363);
-    background-color: #ffffff;
-  }
-  header {
-    width: 414px;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    left: auto;
-  }
-  main {
-    background-color: #eeeeee;
-  }
-  footer {
-    width: 414px;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    left: auto;
-  }
-} */
+
+/* CLASSES QUE O JAVA SCRIPT VAI MEXER */
+
+.liberado {
+  width: 362px;
+  height: 61px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(40, 173, 40);
+  cursor: pointer;
+}
+
 .selecionado {
   border: 5px solid rgb(40, 173, 40);
   transition: 300ms;
@@ -236,12 +209,11 @@ button span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 300;
+  font-weight: 400;
   padding-left: 25px;
   padding-right: 25px;
 }
-
-.total {
+.informacoes-pedidos .total {
   font-weight: 700;
 }
 
@@ -264,7 +236,7 @@ button span {
 
 .confirmar {
   margin-left: 24px;
-  margin-top: 11px;
+  margin-top: 24px;
   background-color: #ffffff;
   height: 52px;
   width: 333px;
@@ -279,12 +251,30 @@ button span {
 }
 
 .cancelar {
-  margin-top: 26px;
+  margin-top: 24px;
+  margin-left: 24px;
   display: flex;
   justify-content: center;
+  height: 52px;
+  width: 333px;
 
   font-size: 20px;
   font-family: Roboto;
   color: #ffffff;
   font-weight: 700;
+}
+
+.preco-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ion-icon {
+  color: #32b72f;
+  font-size: 15.44px;
+}
+
+.not-checked {
+  display: none;
 }

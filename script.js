@@ -9,6 +9,9 @@ let priceBebida = null;
 let nameSobremesa = null;
 let priceSobremesa = null;
 let totalPrice = 0;
+let nomeCliente = null;
+let enderecoCliente = null;
+
 totalPrice = (
   Number(priceAlimento) +
   Number(priceBebida) +
@@ -19,11 +22,17 @@ let msg = "";
 function selecionarAlimento(alimento) {
   boxAlimento = alimento.innerHTML;
   const alimentoAnterior = document.querySelector(".prato .selecionado");
-  if (alimentoAnterior !== null) {
+  const checkedAnterior = document.querySelector(
+    ".prato .selecionado ion-icon"
+  );
+  if (alimentoAnterior !== null && checkedAnterior !== null) {
     alimentoAnterior.classList.remove("selecionado");
+    checkedAnterior.classList.add("not-checked");
   }
 
   alimento.classList.add("selecionado");
+  const checked = document.querySelector(".prato .selecionado ion-icon");
+  checked.classList.remove("not-checked");
 
   nameAlimento = document.querySelector(".prato .selecionado h3").textContent;
 
@@ -37,10 +46,16 @@ function selecionarAlimento(alimento) {
 function selecionarBebida(bebida) {
   boxBebida = bebida.innerHTML;
   const alimentoAnterior = document.querySelector(".bebida .selecionado");
-  if (alimentoAnterior !== null) {
+  const checkedAnterior = document.querySelector(
+    ".bebida .selecionado ion-icon"
+  );
+  if (alimentoAnterior !== null && checkedAnterior !== null) {
     alimentoAnterior.classList.remove("selecionado");
+    checkedAnterior.classList.add("not-checked");
   }
   bebida.classList.add("selecionado");
+  const checked = document.querySelector(".bebida .selecionado ion-icon");
+  checked.classList.remove("not-checked");
 
   nameBebida = document.querySelector(".bebida .selecionado h3").textContent;
   priceBebida = document
@@ -51,11 +66,17 @@ function selecionarBebida(bebida) {
 function selecionarSobremesa(sobremesa) {
   boxSobremesa = sobremesa.innerHTML;
   const alimentoAnterior = document.querySelector(".sobremesa .selecionado");
-  if (alimentoAnterior !== null) {
+  const checkedAnterior = document.querySelector(
+    ".sobremesa .selecionado ion-icon"
+  );
+  if (alimentoAnterior !== null && checkedAnterior !== null) {
     alimentoAnterior.classList.remove("selecionado");
+    checkedAnterior.classList.add("not-checked");
   }
 
   sobremesa.classList.add("selecionado");
+  const checked = document.querySelector(".sobremesa .selecionado ion-icon");
+  checked.classList.remove("not-checked");
 
   nameSobremesa = document.querySelector(
     ".sobremesa .selecionado h3"
@@ -91,7 +112,10 @@ function fecharPedido() {
     const fundo = document.querySelector(".fundo-tela");
     fundo.classList.remove("nao-confirmado");
 
-    msg = `Olá, gostaria de fazer o pedido: \n - Prato: ${nameAlimento} \n- Bebida: ${nameBebida} \n- Sobremesa: ${nameSobremesa} \nTotal: R$ ${totalPrice}`;
+    nomeCliente = prompt("Qual o seu nome?");
+    enderecoCliente = prompt("Qual o seu endereço?");
+
+    msg = `Olá, gostaria de fazer o pedido: \n - Prato: ${nameAlimento} \n- Bebida: ${nameBebida} \n- Sobremesa: ${nameSobremesa} \nTotal: R$ ${totalPrice} \n \n Nome: ${nomeCliente} \n Endereço: ${enderecoCliente}`;
     console.log(msg);
 
     finalizarPedido();
@@ -125,7 +149,7 @@ function finalizarPedido() {
   valorSobremesaFinal.innerHTML = priceSobremesa.replace(".", ",");
 
   const valorTotal = document.querySelector(".informacoes-pedidos .total h5");
-  valorTotal.innerHTML = totalPrice.replace(".", ",");
+  valorTotal.innerHTML = "R$ " + totalPrice.replace(".", ",");
 }
 
 function cancelar() {
