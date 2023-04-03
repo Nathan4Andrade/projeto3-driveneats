@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="fundo-tela nao-confirmado">
-      <div class="tela-confirmacao">
+      <div data-test="confirm-order-modal" class="tela-confirmacao">
         <h1>Confirme seu pedido</h1>
         <div class="informacoes-pedidos">
           <div class="alimento">
@@ -48,10 +48,14 @@
             <h5>Teste</h5>
           </div>
         </div>
-        <div class="confirmar" onclick="finalizar()">
+        <div
+          data-test="confirm-order-btn"
+          class="confirmar"
+          onclick="finalizar()"
+        >
           <p>Tudo certo, pode pedir!</p>
         </div>
-        <div class="cancelar">
+        <div data-test="cancel-order-btn" class="cancelar">
           <p onclick="cancelar()">Cancelar</p>
         </div>
       </div>
